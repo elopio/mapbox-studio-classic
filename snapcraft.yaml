@@ -13,7 +13,7 @@ confinement: strict
 apps:
   server:
     command: sh -c \"cd $SNAP/lib/node_modules/mapbox-studio && npm start\"
-    plugs: [network]
+    plugs: [network, network-bind]
 
 parts:
   mapbox-studio-classic:
