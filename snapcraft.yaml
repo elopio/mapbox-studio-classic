@@ -1,4 +1,4 @@
-name: mabox-studio-classic
+name: mapbox-studio-classic
 version: master
 summary: Application for vector tile driven map design.
 description: |
@@ -14,7 +14,6 @@ apps:
   server:
     command: sh -c \"cd $SNAP/lib/node_modules/mapbox-studio && npm start\"
     plugs: [network]
-    daemon: simple
 
 parts:
   mapbox-studio-classic:
