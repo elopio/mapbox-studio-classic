@@ -1,0 +1,4 @@
+#!/bin/sh
+export SQLITE_TMPDIR=/tmp
+cd $SNAP/lib/node_modules/mapbox-studio
+exec npm start

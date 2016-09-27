@@ -12,7 +12,7 @@ confinement: strict
 
 apps:
   server:
-    command: sh -c \"cd $SNAP/lib/node_modules/mapbox-studio && npm start\"
+    command: bin/wrapper
     plugs: [network, network-bind]
 
 parts:
@@ -21,3 +21,12 @@ parts:
     plugin: nodejs
     build-packages: [curl, git]
     stage-packages: [sqlite3]
+  wrapper:
+    source: .
+    plugin: dump
+    organize:
+      wrapper: bin/wrapper
+    stage:
+      - bin/wrapper
+    snap:
+      - bin/wrapper
