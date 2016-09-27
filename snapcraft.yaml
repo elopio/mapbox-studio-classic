@@ -20,3 +20,4 @@ parts:
     source: .
     plugin: nodejs
     build-packages: [curl, git]
+    stage-packages: [sqlite3]
